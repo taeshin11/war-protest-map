@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'War Protest Map | Real-Time Conflict Intelligence',
+  description: 'Mapping anti-war protests, peace demonstrations, and civilian opposition movements to armed conflicts worldwide',
+  keywords: 'anti-war protests, peace demonstrations, war protest map, civilian opposition, protest tracker, peace movement',
+}
+
 import protests from '@/public/data/protests.json'
 import ProtestGrid from '@/components/ProtestGrid'
 

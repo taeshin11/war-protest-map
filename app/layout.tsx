@@ -12,9 +12,30 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "War Protest Map — Anti-War & Solidarity Demonstrations Worldwide",
-  description: "Track anti-war protests, peace marches, and solidarity demonstrations across the globe.",
-};
+  title: {
+    default: 'War Protest Map | Real-Time Intelligence',
+    template: '%s | War Protest Map'
+  },
+  description: 'Mapping anti-war protests, peace demonstrations, and civilian opposition movements to armed conflicts worldwide',
+  keywords: 'anti-war protests, peace demonstrations, war protest map, civilian opposition, protest tracker, peace movement',
+  openGraph: {
+    type: 'website',
+    siteName: 'War Protest Map',
+    title: 'War Protest Map | Real-Time Intelligence',
+    description: 'Mapping anti-war protests, peace demonstrations, and civilian opposition movements to armed conflicts worldwide',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'War Protest Map',
+    description: 'Mapping anti-war protests, peace demonstrations, and civilian opposition movements to armed conflicts worldwide',
+  },
+  verification: {
+    google: 'add-your-google-site-verification-here',
+  },
+  other: {
+    'google-adsense-account': 'ca-pub-add-your-publisher-id-here',
+  },
+}
 
 export default function RootLayout({
   children,
@@ -45,9 +66,17 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 py-8 mt-16">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <p className="text-sm">© 2025 War Protest Map. All rights reserved.</p>
-            <VisitorCounter />
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm border-t border-slate-700 pt-6 mb-4 mt-4">
+              <a href="/about" className="hover:text-white transition-colors">About Us</a>
+              <a href="/faq" className="hover:text-white transition-colors">How to Use &amp; FAQ</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+            <div className="flex items-center justify-between">
+              <p className="text-sm">© 2025 War Protest Map. All rights reserved.</p>
+              <VisitorCounter />
+            </div>
           </div>
         </footer>
         <AdMobileSticky />
