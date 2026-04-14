@@ -11,20 +11,20 @@ export default function StatsBar({ protests }: { protests: Protest[] }) {
   const totalParticipants = protests.reduce((s, p) => s + p.estimated_size, 0)
 
   return (
-    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
+    <div className="bg-white border border-slate-100 rounded-2xl shadow-sm p-5 mb-6">
       <div className="flex flex-wrap gap-6 items-center">
-        <div>
-          <span className="text-2xl font-bold text-gray-900">{protests.length}</span>
-          <span className="text-sm text-gray-500 ml-1">total protests</span>
+        <div className="text-center">
+          <div className="text-2xl font-extrabold text-pink-500">{protests.length}</div>
+          <div className="text-xs text-slate-400 mt-0.5">total protests</div>
         </div>
-        <div>
-          <span className="text-2xl font-bold text-gray-900">{(totalParticipants / 1000000).toFixed(1)}M</span>
-          <span className="text-sm text-gray-500 ml-1">estimated participants</span>
+        <div className="text-center">
+          <div className="text-2xl font-extrabold text-pink-500">{(totalParticipants / 1000000).toFixed(1)}M</div>
+          <div className="text-xs text-slate-400 mt-0.5">participants</div>
         </div>
         {Object.entries(byConflict).map(([label, count]) => (
-          <div key={label} className="flex items-center gap-1">
-            <span className="text-sm font-medium text-gray-700">{label}:</span>
-            <span className="text-sm text-gray-900 font-bold">{count}</span>
+          <div key={label} className="flex items-center gap-2">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-pink-500/10 text-pink-600 ring-1 ring-inset ring-pink-500/20">{label}</span>
+            <span className="text-sm font-bold text-slate-800">{count}</span>
           </div>
         ))}
       </div>

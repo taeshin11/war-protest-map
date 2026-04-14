@@ -42,21 +42,21 @@ export default function FilterBar({ protests, onFilter }: FilterBarProps) {
   }, [conflict, country, type, protests, onFilter])
 
   return (
-    <div className="flex flex-wrap gap-3 mb-6 p-4 bg-white border border-gray-200 rounded-lg">
-      <select value={conflict} onChange={e => setConflict(e.target.value)} className="border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    <div className="flex flex-wrap gap-3 mb-6 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm">
+      <select value={conflict} onChange={e => setConflict(e.target.value)} className="border border-slate-200 rounded-xl px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-slate-50">
         <option value="">All Conflicts</option>
         {conflicts.map(c => <option key={c} value={c}>{c}</option>)}
       </select>
-      <select value={country} onChange={e => setCountry(e.target.value)} className="border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <select value={country} onChange={e => setCountry(e.target.value)} className="border border-slate-200 rounded-xl px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-slate-50">
         <option value="">All Countries</option>
         {countries.map(c => <option key={c} value={c}>{c}</option>)}
       </select>
-      <select value={type} onChange={e => setType(e.target.value)} className="border border-gray-300 rounded px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <select value={type} onChange={e => setType(e.target.value)} className="border border-slate-200 rounded-xl px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-pink-400 bg-slate-50">
         <option value="">All Types</option>
         {types.map(t => <option key={t} value={t}>{t}</option>)}
       </select>
       {(conflict || country || type) && (
-        <button onClick={() => { setConflict(''); setCountry(''); setType('') }} className="text-sm text-red-500 hover:text-red-700 px-2">
+        <button onClick={() => { setConflict(''); setCountry(''); setType('') }} className="text-sm text-pink-600 hover:text-pink-700 font-semibold px-3 py-2 rounded-xl hover:bg-pink-50 transition-colors">
           Clear filters
         </button>
       )}
