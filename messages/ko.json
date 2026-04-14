@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "전쟁 시위 지도 — 전 세계 반전 집회",
+    "description": "전 세계 반전 시위, 평화 행진, 연대 집회를 추적합니다."
+  },
+  "nav": {
+    "home": "홈",
+    "heatmap": "히트맵",
+    "about": "소개"
+  },
+  "filters": {
+    "all_conflicts": "모든 분쟁",
+    "all_countries": "모든 국가",
+    "all_types": "모든 유형"
+  },
+  "protest": {
+    "estimated": "추정",
+    "source": "출처",
+    "organizer": "주최"
+  }
+}

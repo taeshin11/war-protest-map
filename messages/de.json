@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "Kriegsprotestkarte — Weltweite Anti-Kriegs-Demonstrationen",
+    "description": "Verfolgen Sie Anti-Kriegs-Proteste, Friedensmärsche und Solidaritätsdemonstrationen weltweit."
+  },
+  "nav": {
+    "home": "Startseite",
+    "heatmap": "Heatmap",
+    "about": "Über uns"
+  },
+  "filters": {
+    "all_conflicts": "Alle Konflikte",
+    "all_countries": "Alle Länder",
+    "all_types": "Alle Typen"
+  },
+  "protest": {
+    "estimated": "geschätzt",
+    "source": "Quelle",
+    "organizer": "Veranstalter"
+  }
+}

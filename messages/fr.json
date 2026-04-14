@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "Carte des Protestations — Manifestations Anti-Guerre Mondiales",
+    "description": "Suivez les protestations anti-guerre, marches pour la paix et manifestations de solidarité dans le monde."
+  },
+  "nav": {
+    "home": "Accueil",
+    "heatmap": "Carte thermique",
+    "about": "À propos"
+  },
+  "filters": {
+    "all_conflicts": "Tous les conflits",
+    "all_countries": "Tous les pays",
+    "all_types": "Tous les types"
+  },
+  "protest": {
+    "estimated": "estimé",
+    "source": "Source",
+    "organizer": "Organisateur"
+  }
+}

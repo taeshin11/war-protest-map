@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "Mapa de Protestas de Guerra — Manifestaciones Mundiales",
+    "description": "Seguimiento de protestas anti-guerra, marchas por la paz y demostraciones de solidaridad en todo el mundo."
+  },
+  "nav": {
+    "home": "Inicio",
+    "heatmap": "Mapa de calor",
+    "about": "Acerca de"
+  },
+  "filters": {
+    "all_conflicts": "Todos los conflictos",
+    "all_countries": "Todos los países",
+    "all_types": "Todos los tipos"
+  },
+  "protest": {
+    "estimated": "estimado",
+    "source": "Fuente",
+    "organizer": "Organizador"
+  }
+}

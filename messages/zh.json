@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "战争抗议地图 — 全球反战示威",
+    "description": "追踪全球反战抗议、和平游行和团结示威活动。"
+  },
+  "nav": {
+    "home": "首页",
+    "heatmap": "热图",
+    "about": "关于"
+  },
+  "filters": {
+    "all_conflicts": "所有冲突",
+    "all_countries": "所有国家",
+    "all_types": "所有类型"
+  },
+  "protest": {
+    "estimated": "估计",
+    "source": "来源",
+    "organizer": "组织者"
+  }
+}

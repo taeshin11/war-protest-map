@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "War Protest Map — Anti-War & Solidarity Demonstrations Worldwide",
+    "description": "Track anti-war protests, peace marches, and solidarity demonstrations across the globe."
+  },
+  "nav": {
+    "home": "Home",
+    "heatmap": "Heatmap",
+    "about": "About"
+  },
+  "filters": {
+    "all_conflicts": "All Conflicts",
+    "all_countries": "All Countries",
+    "all_types": "All Types"
+  },
+  "protest": {
+    "estimated": "estimated",
+    "source": "Source",
+    "organizer": "Organizer"
+  }
+}

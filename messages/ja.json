@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "戦争抗議マップ — 世界の反戦デモ",
+    "description": "世界中の反戦抗議、平和行進、連帯デモを追跡します。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "heatmap": "ヒートマップ",
+    "about": "概要"
+  },
+  "filters": {
+    "all_conflicts": "すべての紛争",
+    "all_countries": "すべての国",
+    "all_types": "すべての種類"
+  },
+  "protest": {
+    "estimated": "推定",
+    "source": "出典",
+    "organizer": "主催"
+  }
+}
