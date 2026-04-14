@@ -22,7 +22,7 @@ interface Protest {
   tags: string[]
 }
 
-export default function ProtestGrid({ protests }: { protests: Protest[] }) {
+export default function ProtestGrid({ protests, locale = 'en' }: { protests: Protest[]; locale?: string }) {
   const [filtered, setFiltered] = useState<Protest[]>(protests)
   const handleFilter = useCallback((f: Protest[]) => setFiltered(f), [])
 
@@ -32,7 +32,7 @@ export default function ProtestGrid({ protests }: { protests: Protest[] }) {
       <FilterBar protests={protests} onFilter={handleFilter} />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filtered.length === 0 && <p className="col-span-3 text-center text-gray-400 py-12">No protests match your filters.</p>}
-        {filtered.map(p => <ProtestCard key={p.id} protest={p} />)}
+        {filtered.map(p => <ProtestCard key={p.id} protest={p} locale={locale} />)}
       </div>
     </>
   )

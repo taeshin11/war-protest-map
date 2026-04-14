@@ -1,10 +1,14 @@
 import protests from '@/public/data/protests.json'
+import { setRequestLocale } from 'next-intl/server'
 
 export const metadata = {
   title: 'Protest Heatmap — Monthly Frequency | War Protest Map',
 }
 
-export default function HeatmapPage() {
+export default async function HeatmapPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   // Build month-year grid
   const counts: Record<string, number> = {}
   protests.forEach(p => {
@@ -27,7 +31,7 @@ export default function HeatmapPage() {
   }
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Protest Frequency Heatmap</h1>
       <p className="text-gray-500 mb-6">Monthly protest activity across all tracked conflicts.</p>
       <div className="bg-white border border-gray-200 rounded-lg p-6 overflow-x-auto">

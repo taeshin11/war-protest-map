@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'War Protest Map | Real-Time Conflict Intelligence',
@@ -9,7 +10,10 @@ export const metadata: Metadata = {
 import protests from '@/public/data/protests.json'
 import ProtestGrid from '@/components/ProtestGrid'
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   const sorted = [...protests].sort((a, b) => b.date.localeCompare(a.date))
   const totalParticipants = protests.reduce((s: number, p: { estimated_size: number }) => s + p.estimated_size, 0)
   const countries = new Set(protests.map((p: { country: string }) => p.country)).size
@@ -44,7 +48,7 @@ export default function Home() {
         </div>
       </section>
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <ProtestGrid protests={sorted} />
+        <ProtestGrid protests={sorted} locale={locale} />
       </div>
     </div>
   )

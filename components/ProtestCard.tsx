@@ -19,7 +19,7 @@ interface Protest {
   tags: string[]
 }
 
-export default function ProtestCard({ protest }: { protest: Protest }) {
+export default function ProtestCard({ protest, locale = 'en' }: { protest: Protest; locale?: string }) {
   return (
     <div className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-5 group">
       <div className="flex items-start justify-between gap-2 mb-3">
@@ -42,7 +42,7 @@ export default function ProtestCard({ protest }: { protest: Protest }) {
         <a href={protest.source_url} target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 font-medium transition-colors">{protest.source}</a>
       </div>
       <p className="text-xs text-slate-400 mt-1.5">Organizer: {protest.organizer}</p>
-      <Link href={`/protest/${protest.id}`} className="mt-3 text-xs text-pink-600 hover:text-pink-700 font-semibold block transition-colors">View details →</Link>
+      <Link href={`/${locale}/protest/${protest.id}`} className="mt-3 text-xs text-pink-600 hover:text-pink-700 font-semibold block transition-colors">View details →</Link>
     </div>
   )
 }
