@@ -5,6 +5,7 @@ import Link from "next/link";
 import VisitorCounter from "@/components/VisitorCounter";
 import AdHeader from "@/components/ads/AdHeader";
 import AdMobileSticky from "@/components/ads/AdMobileSticky";
+import { FeedbackButton } from "@/components/FeedbackButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,6 +81,20 @@ export default function RootLayout({
           </div>
         </footer>
         <AdMobileSticky />
+        <FeedbackButton siteName="War Protest Map" siteUrl="https://war-protest-map.vercel.app" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "War Protest Map",
+              "url": "https://war-protest-map.vercel.app",
+              "description": "Mapping anti-war protests, peace demonstrations, and civilian opposition to armed conflicts worldwide",
+              "publisher": { "@type": "Organization", "name": "War Protest Map", "url": "https://war-protest-map.vercel.app" }
+            })
+          }}
+        />
       </body>
     </html>
   );
