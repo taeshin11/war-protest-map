@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script'
 import { Geist } from "next/font/google";
 import "./globals.css";
 
@@ -26,10 +27,10 @@ export const metadata: Metadata = {
     description: 'Mapping anti-war protests, peace demonstrations, and civilian opposition movements to armed conflicts worldwide',
   },
   verification: {
-    google: 'add-your-google-site-verification-here',
+    google: 'WddgcbVJsL2BGHNAje5m6DK56IcR0Mw5UOqozI2Xtrc',
   },
   other: {
-    'google-adsense-account': 'ca-pub-add-your-publisher-id-here',
+    'google-adsense-account': 'ca-pub-7098271335538021',
   },
 }
 
@@ -51,7 +52,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7098271335538021"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
